@@ -16,7 +16,7 @@ public class StudentService {
 
         Student student = new Student();
         student.setName(studentDto.getName());
-        student.setName(studentDto.getCourse());
+        student.setCourse(studentDto.getCourse());
         Student savedStudent = studentRepository.save(student);
 
         StudentDto savedStudentDto = new StudentDto();

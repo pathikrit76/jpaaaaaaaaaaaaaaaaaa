@@ -15,14 +15,15 @@ import org.springframework.web.bind.annotation.RestController;
 public class controller {
     @Autowired
     StudentService service;
-            @PostMapping("/post")
-            public ResponseEntity<StudentDto> insertdata(@RequestBody StudentDto studentDto)
-            {   log.debug("1st debug");
-                log.debug("hey",studentDto);
-                StudentDto studentsaveddata= service.addStudent(studentDto);
-                log.debug("2nd debug");
-                log.debug("2nd hey",studentsaveddata);
-                return new ResponseEntity<>(studentsaveddata,HttpStatus.CREATED);
-            }
+
+    @PostMapping("/post")
+    public ResponseEntity<StudentDto> insertdata(@RequestBody StudentDto studentDto) {
+        log.debug("1st debug");
+        log.debug("hey", studentDto);
+        StudentDto studentsaveddata = service.addStudent(studentDto);
+        log.debug("2nd debug");
+        log.debug("2nd hey", studentsaveddata);
+        return new ResponseEntity<>(studentsaveddata, HttpStatus.CREATED);
+    }
 
 }
